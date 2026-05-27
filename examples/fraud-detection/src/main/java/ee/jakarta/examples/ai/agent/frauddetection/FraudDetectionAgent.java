@@ -14,6 +14,7 @@ package ee.jakarta.examples.ai.agent.frauddetection;
 
 import jakarta.ai.agent.Agent;
 import jakarta.ai.agent.Trigger;
+import jakarta.annotation.security.RolesAllowed;
 import jakarta.ai.agent.Decision;
 import jakarta.ai.agent.Action;
 import jakarta.ai.agent.Outcome;
@@ -60,6 +61,7 @@ public class FraudDetectionAgent {
     }
 
     @Outcome
+    @RolesAllowed({ "admin" })
     private void markTransaction(BankTransaction transaction) {
         // Mark transaction suspect, probably in the database.
     }
