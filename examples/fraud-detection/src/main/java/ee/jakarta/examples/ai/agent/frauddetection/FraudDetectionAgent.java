@@ -61,7 +61,7 @@ public class FraudDetectionAgent {
     }
 
     @Outcome
-    @RolesAllowed({ "admin" })
+    @RolesAllowed({ "BANK MANAGER" })
     private void markTransaction(BankTransaction transaction) {
         // Mark transaction suspect, probably in the database.
     }
